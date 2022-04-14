@@ -5,31 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <title>SketchPad</title>
 </head>
 
 <body>
-    <div class="flex-container">
+    <div class="body">
+    <div class="flex-container" id="container">
         <div class="title">
-            <h1>SketchPad</h1>
+            <h1>ETCH-A-SKETCH</h1>
+            
         </div>
         <div class="content">
-            <div class="board"></div>
             <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Erasor</button>
-                <button onclick="changeColor('random')">Random</button>
-                <button onclick="resetBoard()">Reset</button>
+                <button class="button-24" role="button" onclick="changeColor('black')">Black</button>
+                <button class="button-24" role="button" onclick="changeColor('white')">Erasor</button>
+                <button class="button-24" role="button" onclick="changeColor('random')">Random</button>
+                <button class="button-24" role="button" onclick="resetBoard()">Reset</button>
             </div>
-            <div>
-                <input type="text" placeholder="Size of the Board" value="16" onchange="changeSize(this.value)">
-                <button>Set Size</button>
+            <div class="board"></div>
+            
+            <div class="inputs">
+                <input class="form" type="text" placeholder="Size of the Board" value="16" onchange="changeSize(this.value)">
+                <button class="button-24" role="button">Set Size</button>
             </div>
         </div>
+        
     </div>
-
+    
+</div>
 </body>
 <script src="main.js"></script>
 
